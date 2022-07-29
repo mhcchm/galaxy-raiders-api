@@ -92,8 +92,8 @@ class GameEngine(
         //se for, criar explosão utilizando função que vai ser criada em SpaceField.kt
         if (first.type == "Missile" && second.type == "Asteroid"){
           this.field.generateExplosion(first.center, second.radius)
-
-        } else if(first.type == "Asteroid" && second.type == "Missile"){
+        }
+        if(first.type == "Asteroid" && second.type == "Missile"){
           this.field.generateExplosion(second.center, first.radius)
         }
 
